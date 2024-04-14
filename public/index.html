@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Navbar</title>
+    <link rel="icon" href="https://pbs.twimg.com/profile_images/788414949345390592/U2et31mZ_400x400.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap" rel="stylesheet">
+</head>
+
+<body class="font-[Baloo Bhai 2] my-4">
+    <header class="bg-white">
+        <nav class="flex justify-between items-center w-[92%]  mx-auto">
+            <div>
+                <img class="w-32 cursor-pointer" src="https://www.zdnet.com/a/img/resize/692de626d41025dd6f604cb5a5083bb6a0a30e84/2016/11/21/9f64c3ae-2b96-40c2-a971-2f9d643e90fd/google-qwiklabs-1024x122.png?auto=webp&width=1280" alt="...">
+            </div>
+            <div
+                class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <a class="hover:text-gray-500" href="">
+                        <li>Home</li>
+                    </a>
+                    <a class="hover:text-gray-500" href="">
+                        <li>Products</li>
+                    </a>
+                    <a class="hover:text-gray-500" href="">
+                        <li>Contact Us</li>
+                    </a>
+                    <a class="hover:text-gray-500" href="">
+                        <li>About Us</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <button class="bg-[#1556c6] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Login</button>
+                <button class="bg-[#1556c6] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">SignUp</button>
+                <ion-icon onclick="onToggleMenu(this)" name="list-outline" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+    </header>
+    <main class="bg-url("https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-dsc/events/NEW%20QWIKLABS%201.jpg")">
+
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'list-outline' ? 'close' : 'list-outline'
+            navLinks.classList.toggle('top-[9.5%]')
+        }
+    </script>
+</body>
+
+</html>
